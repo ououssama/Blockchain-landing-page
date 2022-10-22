@@ -1,0 +1,373 @@
+:root{
+  font-family: public sans thin;
+}
+
+body{
+  margin: 0;
+  width: 100%;
+  background: url(pattern.png) 0 0/100% no-repeat, url(website_background.jpg) repeat-y;
+  background-blend-mode: screen;
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  place-items: center;
+  background-size: contain;
+}
+
+header{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo{
+  height: 100%;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img{
+  width: 150px;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  padding-right: 5%;
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  color: white;
+  gap: 3em;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: .5px;
+  padding: 0;
+  align-items: center;
+  cursor: pointer;
+}
+
+nav ul li:last-child{
+  border: white solid 2px;
+  padding: 1em;
+  border-radius: 50px;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+nav ul li:last-child:hover{
+  border: solid #00cc30fe 2px;
+  background-color: #00cc30fe;
+} 
+
+section{
+  display: grid;
+  width: 100%;
+  row-gap: 10em;
+}
+
+.article1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  padding: 0 40px;
+}
+.article1 .content{
+  color: white;
+  width: clamp(500px, 20%, 600px);
+  font-size: 24px;
+  font-family: poppins regular;
+  
+}
+
+button{
+  font-size: 18px;
+  padding: 0 24px;
+  height: 56px;
+  font-family: poppins SemiBold;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #00cc30fe;
+  border: none;
+  box-shadow: #1cff5160 0px 10px 30px -10px;
+  cursor: pointer;
+  
+}
+
+.article1 .container {
+  display: grid;
+  place-items: center;
+  width: clamp(500px, 40%, 700px);
+  gap: 15px;
+}
+
+.article1 img{
+  width: 100%;
+}
+
+.article2{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 7em;
+  padding: 50px;
+}
+
+.article2 .container {
+  display: grid;
+  grid-template: max-content max-content/max-content max-content;
+  gap: 15px;
+}
+.article2 :where(.card2, .card4){
+  transform: translatey(-20px);
+}
+
+.article2 .container > * {
+  border-radius: 10px;
+  background-color: #0254978b;
+  padding: 2em;
+  width: clamp(100px, 250px, 600px);
+}
+
+.article2 :where(.box1, .box2, .box3, .box4){
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #00cc3035;
+}
+
+.article2 :is(.box1, .box2, .box3, .box4) > img{
+  width: 25px;
+}
+
+.article2 :is(.card1, .card2, .card3, .card4) > h3{
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.article2 :is(.card1, .card2, .card3, .card4) > p{
+  color: #ffffffc0;
+  font-size: 16px;
+  margin-top: 0px;
+  line-height: 2.5ch;
+  letter-spacing: .5px;
+}
+
+.article2 .content{
+  width: clamp(500px, 30%, 600px);
+  color: white;
+}
+
+.article2 .content > h1{
+  line-height: 25px;
+  letter-spacing: 1px;
+  font-family: public  sans;
+}
+
+.article2 .content > h3{
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: #ffffffc0;
+}
+
+.article2 .content > h5{
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #ffffffc0;
+}
+
+.article3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7em;
+  padding: 0 50px;
+  
+}
+
+.article3 .container {
+  display: grid;
+  place-items: center;
+  width: clamp(500px, 50%, 600px);
+  gap: 15px;
+}
+
+.article3 .container > img {
+  width: 80%;
+}
+
+.article3 .content{
+  width: clamp(500px, 30%, 600px);
+  color: white;
+}
+
+.article3 .content > h1{
+  line-height: 25px;
+  letter-spacing: 1px;
+  font-family: public sans;
+}
+
+.article3 .content > h3{
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: #ffffffc0;
+}
+
+.article3 .content > h5{
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #ffffffc0;
+}
+
+.article4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  gap: 7em;
+}
+
+.article4 > .img {
+  width: clamp(500px, 50%, 600px);
+}
+.article4 > .img img{
+  width: 100%;
+}
+
+.article4 > .content {
+  width: clamp(500px, 50%, 600px);
+}
+
+.article4 > .content > h1{
+  letter-spacing: 1px;
+  font-family: public sans;
+  color: #ffffff;
+}
+
+.article4 > .content > ul{
+  display: grid;
+  grid-template: 1fr 1fr 1fr/30% 30%;
+  gap: 25px;
+  
+}
+
+.article4 > .content > ul li{
+  color: #ffffffc0;
+  list-style: none;
+  position: relative;
+  
+}
+
+.article4 > .content > ul li::before{
+  position: absolute;
+  content: url(list_style_icon.png);
+  left: -2em;
+  top: 1px;
+}
+
+.article5{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3em;
+}
+
+.article5 > .content{
+  text-align: center;
+}
+
+.article5 > .content > h1 {
+  letter-spacing: 1px;
+  font-family: public sans;
+  color: #ffffff;
+
+}
+
+.article5 > .content > p {
+  color: #ffffffc0;
+  padding: 0 20%;
+  line-height: 1.5em;
+}
+
+.article5 > .container {
+  display: flex;
+  padding: 0 40px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3em;
+}
+
+.article5 > .container > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #0254978b;
+  border-radius: 10px;
+  width: 250px;
+  color: #ffffffc0;
+}
+
+.article5 > .container h4 {
+  color: #ffffff;
+  font-family: public sans extrabold;
+}
+
+.article5 > .container p {
+  font-size: 14px;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.article5 > .container li {
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+.article5 > .container li > b {
+  margin-right: 10px;
+}
+
+.article5 > .container hr{
+  border: none;
+  background-color: #ffffff1e;
+  height: 1px;
+  width: 90%;
+  margin: 2em 0 1em 0;
+}
+
+.article5 > .container h2 {
+  margin-bottom: 1em;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-size: 29px;
+  text-align: center;
+}
+
+.article5 > .container h2 > i {
+  display: block;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  color: #ffffffc0;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.article5 > .container button {
+  margin-bottom: 1em;
+}
+
